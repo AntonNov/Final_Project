@@ -1,0 +1,20 @@
+body {
+  background-color: #f1f1f1;
+  font-size: 40px;
+  font-family: "Open Sans", sans-serif;
+  color: #0f141e;
+}
+h1 {
+  color: orange;
+}
+
+.tasks {
+  padding-left: 20px;
+}
+
+#circle {
+  width: 100px;
+  height: 100px;
+  background: greenyellow;
+  border-radius: 50%;
+}
