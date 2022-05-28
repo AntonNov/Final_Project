@@ -1,20 +1,41 @@
 body {
-  background-color: #f1f1f1;
-  font-size: 40px;
-  font-family: "Open Sans", sans-serif;
-  color: #0f141e;
+  background-color: #efefef;
+  font-size: 1.5em;
+  font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New",
+    monospace;
 }
-h1 {
+
+.main_title {
+  font-size: 3em;
+  font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New",
+    monospace;
+  color: green;
+}
+
+.additional_title {
+  font-size: 2em;
   color: orange;
 }
 
-.tasks {
-  padding-left: 20px;
+.day_in_today_tomorrow {
+  padding-top: 1em;
 }
 
-#circle {
-  width: 100px;
-  height: 100px;
-  background: greenyellow;
-  border-radius: 50%;
+.days_in_index {
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+ol {
+  padding: 0;
+  overflow: hidden;
+  margin: 1em 0 0;
+}
+
+.backwards {
+  margin-top: 3em;
+}
+
+.tasks {
+  padding-top: 1em;
 }
