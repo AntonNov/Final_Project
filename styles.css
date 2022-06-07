@@ -36,6 +36,28 @@ ol {
   margin-top: 3em;
 }
 
+.btn-primary:hover {
+  background-color: blue;
+  border-radius: 10%;
+  height: 2.4em;
+  width: 8.25em;
+}
+
+.btn-secondary:hover {
+  background-color: black;
+  border-radius: 10%;
+  height: 2.4em;
+  width: 7.05em;
+}
+
 .tasks {
   padding-top: 1em;
 }
+
+.buttons {
+  padding-top: 6em;
+}
+
+.error {
+  background-color: #c00;
+} /*На перспективу */
