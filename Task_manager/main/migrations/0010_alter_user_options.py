@@ -6,12 +6,15 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0009_alter_task_options'),
+        ("main", "0009_alter_task_options"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='user',
-            options={'verbose_name': 'пользователя', 'verbose_name_plural': 'Пользователи'},
+            name="user",
+            options={
+                "verbose_name": "пользователя",
+                "verbose_name_plural": "Пользователи",
+            },
         ),
     ]

@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0012_task_is_executed'),
+        ("main", "0012_task_is_executed"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='task',
-            name='is_executed',
-            field=models.BooleanField(default=False, verbose_name='Выполнено'),
+            model_name="task",
+            name="is_executed",
+            field=models.BooleanField(default=False, verbose_name="Выполнено"),
         ),
     ]

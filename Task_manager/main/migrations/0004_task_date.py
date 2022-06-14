@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0003_person_task_person'),
+        ("main", "0003_person_task_person"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='task',
-            name='date',
-            field=models.DateField(null=True, verbose_name='Дата'),
+            model_name="task",
+            name="date",
+            field=models.DateField(null=True, verbose_name="Дата"),
         ),
     ]

@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0011_alter_user_name'),
+        ("main", "0011_alter_user_name"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='task',
-            name='is_executed',
+            model_name="task",
+            name="is_executed",
             field=models.BooleanField(default=False),
         ),
     ]

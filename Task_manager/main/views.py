@@ -1,25 +1,27 @@
-from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView
-
 from .models import Task
 
 
-# def index(request):
-#     return render(request, 'main/index.html')
-
 class Home(ListView):
     model = Task
-    template_name = 'main/index.html'
+    template_name = "main/index.html"
 
 
-def today(request):
-    tasks_for_today = Task.objects.filter(date='2022-06-12')
-    print(tasks_for_today)
-    return render(request, 'main/today.html', {'day': "сегодня", 'tasks': tasks_for_today})
+class Day:
+    model = Task
+    login_url = "/admin/"
 
 
-def tomorrow(request):
-    tasks_for_tomorrow = Task.objects.filter(date='2022-06-13')
-    print(tasks_for_tomorrow)
-    return render(request, 'main/tomorrow.html', {'day': "завтра", 'tasks': tasks_for_tomorrow})
+class Today(Day, LoginRequiredMixin, ListView):
+    template_name = "main/today.html"
+    date_name = "сегодня"
+    tasks_for_today = Task.objects.filter(date_name=date_name)
+    extra_context = {"day": date_name, "tasks": tasks_for_today}
 
+
+class Tomorrow(Day, LoginRequiredMixin, ListView):
+    template_name = "main/tomorrow.html"
+    date_name = "завтра"
+    tasks_for_tomorrow = Task.objects.filter(date_name=date_name)
+    extra_context = {"day": date_name, "tasks": tasks_for_tomorrow}

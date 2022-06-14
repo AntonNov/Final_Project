@@ -6,12 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0008_remove_user_surname_task_user'),
+        ("main", "0008_remove_user_surname_task_user"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='task',
-            options={'verbose_name': 'задачу', 'verbose_name_plural': 'Задачи'},
+            name="task",
+            options={"verbose_name": "задачу", "verbose_name_plural": "Задачи"},
         ),
     ]
