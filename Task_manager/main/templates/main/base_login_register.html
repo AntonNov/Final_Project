@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'main/styles.css' %}"/>
+</head>
+<body>
+<div class="container text-center my-5">
+  <div class="col-lg-12 mx-auto">
+    <h1>{% block title %} {% endblock %} </h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Подтвердить</button>
+    </form>
+  </div>
+</div>
+</div>
+</body>
+</html>
