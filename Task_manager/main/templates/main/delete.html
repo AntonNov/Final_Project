@@ -14,11 +14,7 @@
 <body>
 <div class="container text-center my-5">
   <div class="col-lg-12 mx-auto">
-    <form action="{% url 'add' %}" method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
       <button type="submit">Удалить</button>
-    </form>
   </div>
 </div>
 </div>

@@ -36,12 +36,15 @@
       <button type="button" onclick="window.location.href = '/register';" class="btn btn-outline-primary me-2 Login">
         Login
       </button>
-      <button type="button" onclick="window.location.href = '/login';" class="btn btn-primary">Sign-up</button>
+      <button type="button" onclick="window.location.href = '/login';" class="btn btn-primary">
+        Sign-up
+      </button>
     </div>
   {% else %}
     <div class="col-md-3 text-end">
-        {{ user.username }}
-    <button type="button" onclick="window.location.href = '/logout';" class="btn btn-outline-primary me-2">Logout
+    {{ user.username }}
+    <button type="button" onclick="window.location.href = '/logout';" class="btn btn-outline-primary me-2">
+      Logout
     </button>
     <div>
   {% endif %}
@@ -56,13 +59,13 @@
         <p><a href="{% url 'tomorrow' %}"> Посмотреть задачи на завтра</a></p>
       </div>
       <p>
-        <input type="button" value="Добавить новую задачу" size="100px"/>
+        <input type="button" onclick="window.location.href = '/add';" value="Добавить новую задачу" size="100px"/>
       </p>
       <p>
-        <input type="button" value="Обновить задачи" size="100px"/>
+        <input type="button" onclick="window.location.href = '/update';" value="Обновить задачи" size="100px"/>
       </p>
       <p>
-        <input type="button" value="Удалить задачи" size="100px"/>
+        <input type="button" onclick="window.location.href = '/delete';" value="Удалить задачи" size="100px"/>
       </p>
     {% endif %}
     <div

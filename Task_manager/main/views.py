@@ -4,7 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView
+from django.views.generic import CreateView, ListView
 
 from .forms import *
 from .models import *
@@ -34,6 +34,19 @@ class Tomorrow(BaseClass, LoginRequiredMixin):
     extra_context = {"day": date_name, "tasks": tasks_for_tomorrow}
 
 
+class Login(LoginView):
+    form_class = AuthenticationForm
+    template_name = 'main/login.html'
+
+    def get_success_url(self):
+        return reverse_lazy('home')
+
+
+def logout_user(request):
+    logout(request)
+    return redirect('home')
+
+
 class Add(LoginRequiredMixin, CreateView):
     login_url = reverse_lazy('home')
     form_class = AddTaskForm
@@ -55,16 +68,3 @@ class Register(CreateView):
     form_class = UserCreationForm
     template_name = 'main/register.html'
     success_url = reverse_lazy('login')
-
-
-class Login(LoginView):
-    form_class = AuthenticationForm
-    template_name = 'main/login.html'
-
-    def get_success_url(self):
-        return reverse_lazy('home')
-
-
-def logout_user(request):
-    logout(request)
-    return redirect('home')

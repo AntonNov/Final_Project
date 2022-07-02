@@ -24,7 +24,13 @@
             <ol>
               {% for task in tasks %}
               <li class="alert alert-warning mt-2">
-                <input class="checkbox" type="checkbox" {% if task.is_executed %} checked {% endif %}/>
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  {% if task.is_executed %}
+                  checked
+                  {% endif %}
+                />
                 <strong>{{ task }} </strong>
               </li>
               {% endfor %}
