@@ -5,15 +5,16 @@ certifi==2021.10.8
 charset-normalizer==2.0.9
 coverage==5.5
 Django==4.0.5
+django-crispy-forms==1.14.0
 djangorestframework==3.13.1
 idna==3.3
 iniconfig==1.1.1
 Jinja2==3.1.2
 MarkupSafe==2.1.1
 method==0.0.0.0.dev20200926
-numpy==1.22.3
 packaging==21.0
 pluggy==0.13.1
+psycopg2==2.9.3
 py==1.10.0
 pyparsing==2.4.7
 pytest==6.2.4

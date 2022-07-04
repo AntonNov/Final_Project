@@ -62,9 +62,9 @@ ol {
   padding-top: 12em;
 }
 
-.error {
-  background-color: #c00;
-} /*На перспективу */
+/*.error {*/
+/*  background-color: #c00;*/
+/*} !*На перспективу *!*/
 
 input[type="checkbox"] {
   zoom: 1.75;

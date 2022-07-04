@@ -6,15 +6,10 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0016_task_date_name_alter_task_date'),
+        ("main", "0016_task_date_name_alter_task_date"),
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='task',
-            name='user',
-        ),
-        migrations.DeleteModel(
-            name='User',
-        ),
+        migrations.RemoveField(model_name="task", name="user",),
+        migrations.DeleteModel(name="User",),
     ]

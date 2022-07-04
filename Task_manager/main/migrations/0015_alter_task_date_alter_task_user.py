@@ -7,18 +7,20 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0014_alter_task_is_executed'),
+        ("main", "0014_alter_task_is_executed"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='task',
-            name='date',
-            field=models.DateField(verbose_name='Дата'),
+            model_name="task", name="date", field=models.DateField(verbose_name="Дата"),
         ),
         migrations.AlterField(
-            model_name='task',
-            name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='get_tasks', to='main.user'),
+            model_name="task",
+            name="user",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.PROTECT,
+                related_name="get_tasks",
+                to="main.user",
+            ),
         ),
     ]

@@ -17,7 +17,7 @@ class Home(ListView):
 
 class BaseClass(ListView):
     model = Task
-    login_url = reverse_lazy('home')
+    login_url = reverse_lazy("home")
 
 
 class Today(BaseClass, LoginRequiredMixin):
@@ -36,35 +36,35 @@ class Tomorrow(BaseClass, LoginRequiredMixin):
 
 class Login(LoginView):
     form_class = AuthenticationForm
-    template_name = 'main/login.html'
+    template_name = "main/login.html"
 
     def get_success_url(self):
-        return reverse_lazy('home')
+        return reverse_lazy("home")
 
 
 def logout_user(request):
     logout(request)
-    return redirect('home')
+    return redirect("home")
 
 
 class Add(LoginRequiredMixin, CreateView):
-    login_url = reverse_lazy('home')
+    login_url = reverse_lazy("home")
     form_class = AddTaskForm
-    template_name = 'main/add.html'
-    success_url = reverse_lazy('home')
+    template_name = "main/add.html"
+    success_url = reverse_lazy("home")
 
 
 class Update(LoginRequiredMixin, CreateView):
-    login_url = reverse_lazy('home')
+    login_url = reverse_lazy("home")
     template_name = "main/update.html"
 
 
 class Delete(LoginRequiredMixin, CreateView):
-    login_url = reverse_lazy('home')
+    login_url = reverse_lazy("home")
     template_name = "main/delete.html"
 
 
 class Register(CreateView):
     form_class = UserCreationForm
-    template_name = 'main/register.html'
-    success_url = reverse_lazy('login')
+    template_name = "main/register.html"
+    success_url = reverse_lazy("login")

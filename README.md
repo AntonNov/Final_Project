@@ -1,3 +1,6 @@
 # Проект представляет собой реализацию приложения "Заметки" (типа Task manager)
 
-## [Ссылка на репозиторий в Dockerhub](https://hub.docker.com/u/antonnov123)
+![](data/photos/4.png)
+![](data/photos/1.png)
+![](data/photos/2.png)
+![](data/photos/3.png)
