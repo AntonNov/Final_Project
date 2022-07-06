@@ -4,7 +4,7 @@ backports.zoneinfo==0.2.1
 certifi==2021.10.8
 charset-normalizer==2.0.9
 coverage==5.5
-Django==4.0.5
+Django==4.0.6
 django-crispy-forms==1.14.0
 djangorestframework==3.13.1
 idna==3.3
